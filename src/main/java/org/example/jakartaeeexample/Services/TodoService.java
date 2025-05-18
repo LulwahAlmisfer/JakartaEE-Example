@@ -2,12 +2,14 @@ package org.example.jakartaeeexample.Services;
 import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.example.jakartaeeexample.Entities.Todo;
 
 import java.util.List;
 
 
 @Dependent
+@Transactional
 public class TodoService {
 
     @PersistenceContext(unitName = "TodoPU")
